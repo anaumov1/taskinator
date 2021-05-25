@@ -44,7 +44,7 @@ var createTaskEl = function(taskDataObj){
 
     var taskActionsEl = createTaskActions(taskIdCounter);
     listItemEl.appendChild(taskActionsEl);
-    
+
     //add entire list item to list
     taskToDoEl.appendChild(listItemEl);
 
@@ -92,6 +92,8 @@ var createTaskActions = function(taskId) {
     }
 
     return actionContainerEl;
+
+    
 
 }
 formEl.addEventListener("submit", taskFormHandler);
