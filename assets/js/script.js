@@ -1,8 +1,8 @@
 
-var taskInProgressEl = document.querySelector("#task-in-progress");
-var taskCompletedEl = document.querySelector("#task-completed");
+var tasksInProgressEl = document.querySelector("#task-in-progress");
+var tasksCompletedEl = document.querySelector("#task-completed");
 var formEl = document.querySelector("#task-form");
-var taskToDoEl = document.querySelector("#task-to-do");
+var tasksToDoEl = document.querySelector("#task-to-do");
 var taskIdCounter = 0;
 var pageContentEl = document.querySelector("#page-content");
 var completeEditTask = function(taskName, taskType, taskId) {
@@ -78,7 +78,7 @@ var createTaskEl = function(taskDataObj){
     listItemEl.appendChild(taskActionsEl);
 
     //add entire list item to list
-    taskToDoEl.appendChild(listItemEl);
+    tasksToDoEl.appendChild(listItemEl);
 
     taskIdCounter++
 
@@ -126,7 +126,6 @@ var createTaskActions = function(taskId) {
     return actionContainerEl;  
 
 }
-formEl.addEventListener("submit", taskFormHandler);
 
 var taskButtonHandler = function(event) {
 
@@ -171,6 +170,7 @@ var editTask = function(taskId) {
 };
 
 var taskStatusChangeHandler = function(event) {
+  console.log(event.target.value);
     // get the task item's id
   var taskId = event.target.getAttribute("data-task-id");
 
@@ -194,3 +194,4 @@ var taskStatusChangeHandler = function(event) {
 
 pageContentEl.addEventListener("click", taskButtonHandler);
 pageContentEl.addEventListener("change", taskStatusChangeHandler);
+formEl.addEventListener("submit", taskFormHandler);
