@@ -1,6 +1,6 @@
 # Taskinator
 
-## A simple Task Tracker usin KanBan method
+## A simple Task Tracker using KanBan method
 The Taskinator is a task tracker site anyone can use for small tasks, the options and functions are currently limited to basics.                                        
                                                                 
 Link to website: https://anaumov1.github.io/taskinator/
